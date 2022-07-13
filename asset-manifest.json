@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/money-tracking-v2-App/static/css/main.f98517fb.css",
+    "main.js": "/money-tracking-v2-App/static/js/main.68ff5eac.js",
+    "index.html": "/money-tracking-v2-App/index.html",
+    "main.f98517fb.css.map": "/money-tracking-v2-App/static/css/main.f98517fb.css.map",
+    "main.68ff5eac.js.map": "/money-tracking-v2-App/static/js/main.68ff5eac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f98517fb.css",
+    "static/js/main.68ff5eac.js"
+  ]
+}
