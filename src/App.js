@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useState } from "react";
+import Expense from "./Component/Expenseslist/expense";
+import expenses from "./Component/Expenseslist/expenselist"; //list of expenses
+import NewExpense from "./Component/NewExpense/newExpense";
 function App() {
+
+  const [exp, setexp] = useState(expenses);
+  //This function is used to collect Data of New Expense from Form
+  const ExpenseDataCollector = (enteredData) => {
+
+    setexp([enteredData, ...exp])
+
+
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+
+      {/* This consiste of NewExpense which consiste of NewExpense Form       */}
+      <NewExpense OnSaveEnteredData={ExpenseDataCollector} />
+
+      {/* This consiste of the table of different Expense */}
+      <Expense item={exp} />
+
     </div>
   );
 }
